@@ -1,0 +1,8 @@
+PHPini中查找
+
+1，使用phpinfo()函数查看socket和openssl扩展信息是否已启用(因为PHPMailer需要PHP的sockets扩展支持，
+而登录QQ邮箱SMTP服务器则必须通过SSL加密的，所以PHP还要有openssl的支持)。
+2，如果openssl没有开启，可以在php.ini文件里开启，方法就是检查是否存在“;extension=php_openssl.dll”，
+有的话去掉前面的注释符‘;’， 如果没有就按照图示添加“extension=php_openssl.dll”。
+;extension=php_openssl.dll 
+如果没有则添加这行
